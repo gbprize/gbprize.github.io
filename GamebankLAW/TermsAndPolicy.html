@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Bank Terms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .language-selector {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="language-selector">
+            <label for="language">Choose Language: </label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="bn">বাংলা</option>
+                <option value="zh">中文 (Chinese)</option>
+                <option value="ja">日本語 (Japanese)</option>
+                <option value="ko">한국어 (Korean)</option>
+                <option value="hi">हिंदी (Hindi)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="es">Español (Spanish)</option>
+            </select>
+        </div>
+
+        <h1 id="title">Gamebank Terms and Policy</h1>
+        <div id="content" class="content">
+            <ul>
+                <li><strong>Welcome to Gamebank, where your gaming experience is our top priority! Here, players can enjoy a variety of games in a secure and enjoyable environment. To ensure fairness and transparency, please read the following guidelines carefully:</strong></li>
+
+                <li><strong>1. Voluntary Participation:</strong><br> Players are never forced to participate in any game. Participation is entirely voluntary, and you have the freedom to join or leave at any time.</li>
+                <li><strong>2. Fair Play:</strong><br> Every player is expected to follow the rules of the game. Any attempt to cheat, manipulate, or exploit loopholes is strictly prohibited.</li>
+                <li><strong>3. Consequences of Rule Violations:</strong><br> Violating the rules will result in the immediate suspension or termination of your account. Players found guilty of breaking the rules will lose any privileges, rewards, or progress associated with their account.</li>
+                <li><strong>4. Respectful Environment:</strong><br> All players must maintain respect and courtesy toward others. Abusive language, harassment, or any form of inappropriate behavior will not be tolerated.</li>
+                <li><strong>5. No Liability:</strong><br> The Game Bank is not responsible for any loss of points, progress, or rewards resulting from rule violations or account suspensions.</li>
+                <li><strong>6. Support and Assistance:</strong><br> If you face any issues or need clarification regarding the rules, our support team is always available to help.</li>
+                
+                <li><strong>By using #Gamebank, you agree to abide by these terms and conditions. Let's keep the community fun, fair, and respectful for everyone.</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const contentEn = `
+            <ul>
+                <li><strong>Welcome to Gamebank, where your gaming experience is our top priority! Here, players can enjoy a variety of games in a secure and enjoyable environment. To ensure fairness and transparency, please read the following guidelines carefully:</strong></li>
+
+                <li><strong>1. Voluntary Participation:</strong><br> Players are never forced to participate in any game. Participation is entirely voluntary, and you have the freedom to join or leave at any time.</li>
+                <li><strong>2. Fair Play:</strong><br> Every player is expected to follow the rules of the game. Any attempt to cheat, manipulate, or exploit loopholes is strictly prohibited.</li>
+                <li><strong>3. Consequences of Rule Violations:</strong><br> Violating the rules will result in the immediate suspension or termination of your account. Players found guilty of breaking the rules will lose any privileges, rewards, or progress associated with their account.</li>
+                <li><strong>4. Respectful Environment:</strong><br> All players must maintain respect and courtesy toward others. Abusive language, harassment, or any form of inappropriate behavior will not be tolerated.</li>
+                <li><strong>5. No Liability:</strong><br> The Game Bank is not responsible for any loss of points, progress, or rewards resulting from rule violations or account suspensions.</li>
+                <li><strong>6. Support and Assistance:</strong><br> If you face any issues or need clarification regarding the rules, our support team is always available to help.</li>
+                
+                <li><strong>By using #Gamebank, you agree to abide by these terms and conditions. Let's keep the community fun, fair, and respectful for everyone.</strong></li>
+            </ul>
+        `;
+        const contentBn = `
+            <ul>
+                <li><strong>গেম ব্যাংকে আপনাকে স্বাগতম! এখানে আপনি বিভিন্ন গেম উপভোগ করতে পারবেন একটি নিরাপদ ও আনন্দদায়ক পরিবেশে। ন্যায্যতা এবং স্বচ্ছতা নিশ্চিত করার জন্য নিম্নলিখিত নির্দেশিকাগুলো পড়ে নিন:</strong></li>
+
+                <li><strong>১. ইচ্ছাকৃত অংশগ্রহণ:</strong><br> গেম খেলতে কাউকে বাধ্য করা হয় না। অংশগ্রহণ সম্পূর্ণ আপনার ইচ্ছার উপর নির্ভরশীল এবং আপনি যেকোনো সময় গেমে যোগ দিতে বা তা ছেড়ে যেতে পারেন।</li>
+                <li><strong>২. ন্যায্য খেলা:</strong><br> প্রতিটি খেলোয়াড়কে গেমের নিয়ম মেনে চলতে হবে। কোনো প্রকার প্রতারণা, কৌশলগত ফাঁকফোকর খোঁজা বা নিয়ম লঙ্ঘন কঠোরভাবে নিষিদ্ধ।</li>
+                <li><strong>৩. নিয়ম লঙ্ঘনের পরিণতি:</strong><br> গেমের নিয়ম ভঙ্গ করলে আপনার অ্যাকাউন্ট সাময়িক বা স্থায়ীভাবে স্থগিত করা হবে। নিয়ম ভঙ্গকারী খেলোয়াড় তাদের প্রাপ্ত সুবিধা, পুরস্কার বা অগ্রগতির কোনো অধিকার পাবে না।</li>
+                <li><strong>৪. সম্মানজনক পরিবেশ:</strong><br> প্রত্যেক খেলোয়াড়কে অন্যদের প্রতি শ্রদ্ধাশীল ও ভদ্র আচরণ করতে হবে। অপমানজনক ভাষা, হয়রানি বা কোনো ধরনের অশালীন আচরণ সম্পূর্ণ নিষিদ্ধ।</li>
+                <li><strong>৫. কোনো দায়বদ্ধতা নেই:</strong><br> নিয়ম ভঙ্গ বা অ্যাকাউন্ট স্থগিত হওয়ার ফলে পয়েন্ট, অগ্রগতি বা পুরস্কার হারালে গেম ব্যাংক কোনোভাবেই দায়ী থাকবে না।</li>
+                <li><strong>৬. সহায়তা ও পরামর্শ:</strong><br> যদি আপনি কোনো সমস্যার সম্মুখীন হন বা নিয়ম সম্পর্কে কোনো ব্যাখ্যা প্রয়োজন হয়, আমাদের সহায়ক দল সবসময় আপনাকে সাহায্য করতে প্রস্তুত।</li>
+                
+                <li><strong>গেম ব্যাংক ব্যবহার করে, আপনি এই শর্তাবলীতে সম্মতি প্রদান করছেন। আসুন, একসঙ্গে একটি মজাদার, ন্যায়সংগত এবং সম্মানজনক কমিউনিটি গড়ে তুলি।</strong></li>
+            </ul>
+        `;
+        const contentZh = `
+            <ul>
+                <li><strong>1. 自愿参与：</strong><br> 玩家永远不会被强制参与任何游戏。参与完全是自愿的，您可以随时加入或离开。</li>
+                <li><strong>2. 公平游戏：</strong><br> 每个玩家都必须遵守游戏规则。任何作弊、操控或利用漏洞的行为都是严格禁止的。</li>
+                <li><strong>3. 规则违规后果：</strong><br> 违反规则将导致您的帐户立即暂停或终止。被判定违反规则的玩家将失去与其帐户相关的所有特权、奖励或进度。</li>
+                <li><strong>4. 尊重环境：</strong><br> 所有玩家必须对他人保持尊重和礼貌。恶劣语言、骚扰或任何不当行为将不被容忍。</li>
+                <li><strong>5. 不承担责任：</strong><br> 游戏银行不对因违规或帐户暂停而导致的积分、进度或奖励的损失负责。</li>
+                <li><strong>6. 支持与帮助：</strong><br> 如果您在遇到任何问题或需要规则解释时，我们的支持团队将随时为您提供帮助。</li>
+            </ul>
+        `;
+        const contentJa = `
+            <ul>
+                <li><strong>1. 任意参加：</strong><br> プレイヤーはゲームに強制的に参加させられることはありません。参加は完全に任意であり、いつでも参加または退出することができます。</li>
+                <li><strong>2. 公正なプレイ：</strong><br> すべてのプレイヤーはゲームのルールに従うことが求められます。不正行為、操作、または抜け道を利用することは禁止されています。</li>
+                <li><strong>3. ルール違反の結果：</strong><br> ルール違反を犯した場合、アカウントは即座に停止または終了します。ルール違反が判明したプレイヤーは、アカウントに関連する特権、報酬、または進捗を失うことになります。</li>
+                <li><strong>4. 尊重の環境：</strong><br> すべてのプレイヤーは他のプレイヤーに対して尊敬と礼儀を持って接する必要があります。侮辱的な言葉、嫌がらせ、または不適切な行動は一切許容されません。</li>
+                <li><strong>5. 責任の免除：</strong><br> ゲームバンクは、ルール違反またはアカウントの停止により失われたポイント、進行状況、報酬に対して責任を負いません。</li>
+                <li><strong>6. サポートと支援：</strong><br> ルールに関して問題が発生したり、説明が必要な場合は、サポートチームがいつでもお手伝いします。</li>
+            </ul>
+        `;
+        const contentKo = `
+            <ul>
+                <li><strong>1. 자발적인 참여:</strong><br> 플레이어는 절대로 강제로 게임에 참여하지 않습니다. 참여는 전적으로 자발적이며 언제든지 게임에 참여하거나 떠날 수 있습니다.</li>
+                <li><strong>2. 공정한 게임:</strong><br> 모든 플레이어는 게임 규칙을 따라야 합니다. 속임수, 조작, 또는 허점을 이용하는 시도는 엄격히 금지됩니다.</li>
+                <li><strong>3. 규칙 위반 시 결과:</strong><br> 규칙을 위반하면 계정이 즉시 정지되거나 종료됩니다. 규칙을 위반한 플레이어는 계정에 연관된 모든 특권, 보상 또는 진행 상황을 잃게 됩니다.</li>
+                <li><strong>4. 존중하는 환경:</strong><br> 모든 플레이어는 다른 사람을 존중하고 예의를 지켜야 합니다. 모욕적인 언어, 괴롭힘, 또는 부적절한 행동은 용납되지 않습니다.</li>
+                <li><strong>5. 책임 없음:</strong><br> 게임 뱅크는 규칙 위반 또는 계정 정지로 인한 포인트, 진행 상황, 또는 보상의 손실에 대해 책임을 지지 않습니다.</li>
+                <li><strong>6. 지원 및 도움:</strong><br> 규칙에 대한 문제가 발생하거나 설명이 필요한 경우, 언제든지 지원 팀이 도와드리겠습니다.</li>
+            </ul>
+        `;
+        const contentHi = `
+            <ul>
+                <li><strong>1. स्वैच्छिक भागीदारी:</strong><br> खिलाड़ियों को कभी भी किसी खेल में भाग लेने के लिए मजबूर नहीं किया जाता है। भागीदारी पूरी तरह से स्वैच्छिक है, और आप किसी भी समय शामिल हो सकते हैं या छोड़ सकते हैं।</li>
+                <li><strong>2. निष्पक्ष खेल:</strong><br> प्रत्येक खिलाड़ी को खेल के नियमों का पालन करना आवश्यक है। धोखाधड़ी, हेरफेर या कोई भी छेड़छाड़ करना सख्त रूप से मना है।</li>
+                <li><strong>3. नियमों का उल्लंघन करने के परिणाम:</strong><br> नियमों का उल्लंघन करने पर आपका खाता तुरंत निलंबित या समाप्त कर दिया जाएगा। नियमों का उल्लंघन करने वाले खिलाड़ियों को उनके खाता से संबंधित किसी भी विशेषाधिकार, पुरस्कार या प्रगति का अधिकार नहीं मिलेगा।</li>
+                <li><strong>4. सम्मानजनक वातावरण:</strong><br> सभी खिलाड़ियों को दूसरों के प्रति सम्मान और शिष्टाचार बनाए रखना चाहिए। अपमानजनक भाषा, उत्पीड़न या किसी भी प्रकार की अनुचित व्यवहार की अनुमति नहीं होगी।</li>
+                <li><strong>5. कोई जिम्मेदारी नहीं:</strong><br> गेम बैंक नियमों का उल्लंघन या खाता निलंबन से उत्पन्न अंक, प्रगति या पुरस्कार की हानि के लिए जिम्मेदार नहीं है।</li>
+                <li><strong>6. सहायता और सहायता:</strong><br> यदि आपको कोई समस्या आती है या नियमों के बारे में स्पष्टता की आवश्यकता होती है, तो हमारी सहायता टीम हमेशा मदद के लिए उपलब्ध है।</li>
+            </ul>
+        `;
+        const contentUr = `
+            <ul>
+                <li><strong>1. رضاکارانہ شرکت:</strong><br> کھلاڑی کو کبھی بھی کسی کھیل میں شرکت کرنے پر مجبور نہیں کیا جاتا ہے۔ شرکت مکمل طور پر رضاکارانہ ہے، اور آپ کسی بھی وقت شامل یا چھوڑ سکتے ہیں۔</li>
+                <li><strong>2. منصفانہ کھیل:</strong><br> ہر کھلاڑی سے توقع کی جاتی ہے کہ وہ کھیل کے قواعد پر عمل کرے گا۔ دھوکہ دہی، ہیرا پھیری، یا کسی بھی طرح کے چالاکی سے بچنا سختی سے منع ہے۔</li>
+                <li><strong>3. قواعد کی خلاف ورزی کے نتائج:</strong><br> قواعد کی خلاف ورزی کرنے پر آپ کا اکاؤنٹ فوری طور پر معطل یا ختم کر دیا جائے گا۔ قواعد کی خلاف ورزی کرنے والے کھلاڑی اپنے اکاؤنٹ سے متعلق کسی بھی خصوصیت، انعامات یا ترقی سے محروم ہو جائیں گے۔</li>
+                <li><strong>4. احترام کا ماحول:</strong><br> تمام کھلاڑیوں کو دوسرے کھلاڑیوں کے ساتھ احترام اور آداب کے ساتھ پیش آنا چاہئے۔ توہین آمیز زبان، ہراسانی یا کسی بھی قسم کے غیر مناسب سلوک کی اجازت نہیں ہوگی۔</li>
+                <li><strong>5. کوئی ذمہ داری نہیں:</strong><br> گیم بینک قواعد کی خلاف ورزی یا اکاؤنٹ کی معطلی کی وجہ سے پوائنٹس، ترقی یا انعامات کے نقصان کا ذمہ دار نہیں ہے۔</li>
+                <li><strong>6. مدد اور معاونت:</strong><br> اگر آپ کو کوئی مسئلہ درپیش ہے یا آپ کو قواعد کے بارے میں وضاحت کی ضرورت ہے تو ہماری مدد ٹیم ہمیشہ آپ کی مدد کے لیے موجود ہے۔</li>
+            </ul>
+        `;
+        const contentEs = `
+            <ul>
+                <li><strong>1. Participación voluntaria:</strong><br> Los jugadores nunca son obligados a participar en ningún juego. La participación es completamente voluntaria, y tienes la libertad de unirte o irte en cualquier momento.</li>
+                <li><strong>2. Juego limpio:</strong><br> Se espera que todos los jugadores sigan las reglas del juego. Cualquier intento de hacer trampa, manipular o explotar lagunas está estrictamente prohibido.</li>
+                <li><strong>3. Consecuencias de violaciones de reglas:</strong><br> Violar las reglas resultará en la suspensión o terminación inmediata de tu cuenta. Los jugadores que violen las reglas perderán todos los privilegios, recompensas o avances asociados con su cuenta.</li>
+                <li><strong>4. Ambiente respetuoso:</strong><br> Todos los jugadores deben mantener el respeto y la cortesía hacia los demás. No se tolerarán comportamientos abusivos, acoso o cualquier tipo de conducta inapropiada.</li>
+                <li><strong>5. No hay responsabilidad:</strong><br> El Game Bank no es responsable de la pérdida de puntos, progreso o recompensas resultantes de violaciones de reglas o suspensiones de cuentas.</li>
+                <li><strong>6. Soporte y asistencia:</strong><br> Si tienes algún problema o necesitas aclaraciones sobre las reglas, nuestro equipo de soporte siempre está disponible para ayudarte.</li>
+            </ul>
+        `;
+
+        const titleEn = "Game Bank Terms and Policy";
+        const titleBn = "গেম ব্যাংকের শর্তাবলী ও বিবরণ";
+
+        function changeLanguage() {
+            const language = document.getElementById('language').value;
+            const contentElement = document.getElementById('content');
+            const titleElement = document.getElementById('title');
+
+            if (language === 'bn') {
+                contentElement.innerHTML = contentBn;
+                titleElement.textContent = "গেম-ব্যাংকের শর্তাবলী";
+            } else if (language === 'zh') {
+                contentElement.innerHTML = contentZh;
+                titleElement.textContent = "游戏银行条款和描述";
+            } else if (language === 'ja') {
+                contentElement.innerHTML = contentJa;
+                titleElement.textContent = "ゲームバンクの利用規約と説明";
+            } else if (language === 'ko') {
+                contentElement.innerHTML = contentKo;
+                titleElement.textContent = "게임 뱅크 약관";
+            } else if (language === 'hi') {
+                contentElement.innerHTML = contentHi;
+                titleElement.textContent = "गेम बैंक की शर्तें और विवरण";
+            } else if (language === 'ur') {
+                contentElement.innerHTML = contentUr;
+                titleElement.textContent = "گیم بینک کی شرائط و وضاحت";
+            } else if (language === 'es') {
+                contentElement.innerHTML = contentEs;
+                titleElement.textContent = "Términos y Descripción de Gamebank";
+            } else {
+                contentElement.innerHTML = contentEn;
+                titleElement.textContent = "Gamebank Terms and Policy";
+            }
+        }
+    </script>
+
+</body>
+</html>
